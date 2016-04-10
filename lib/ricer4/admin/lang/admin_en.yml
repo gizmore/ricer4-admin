@@ -1,0 +1,35 @@
+en:
+  ricer4:
+    plugins:
+      admin:
+
+        die:
+          trigger: "die"
+          description: 'Make $BOT$ quit all servers and die.'
+          default_message: '%{user} used the die command.'
+          
+        purge:
+          trigger: 'purge'
+          description: 'Delete a whole plugin module, it´s triggers and all plugin module tables. DO NOT USE IN PRODUCTION!'
+          msg_purging: 'Scrubbing the db...'
+          msg_purged_and_die: 'All stuff deleted... going to die.'
+
+        raw:
+          trigger: "raw"
+          description: 'Send raw commands to a connector.'
+          
+        reboot:
+          trigger: "reboot"
+          description: 'Kill the $BOT$ process and let it restart.'
+          default_msg: '%{user} used the reboot command.'
+
+        reload:
+          trigger: "reload"
+          description: 'Reload plugin code at runtime.'
+          msg_reloading: 'Reloading ricer code and plugins.'
+          msg_reloaded: 'Everything reloaded and ready to crash.'
+          
+        upgrade:
+          trigger: "upgrade"
+          description: "Do a execute \x02git pull\x02 for $BOT$."
+          msg_pulling: "Executing git pull…"
